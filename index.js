@@ -9,7 +9,21 @@ express()
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
+  .get('/times', (req, res) => res.send(showTimes()))
   .get('/cool', (req, res) => res.send(cool()))
   .get('/test', (req, res) => res.send('This is a test page'))
   .get('/test-log', (req, res) => {console.log('test test123'); res.send('Test line logged')})
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+
+
+showTimes = () =>
+{
+  let result = ''
+  const times = process.env.TIMES || 5
+  for ( i = 0; i < times ; i++)
+  {
+      result += i + ' '
+  }
+  
+  return result
+}
