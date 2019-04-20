@@ -1,5 +1,5 @@
 # Running Locally
-Install dependenices with `npm install`
+Install dependencies with `npm install`
 
     heroku local web
 
