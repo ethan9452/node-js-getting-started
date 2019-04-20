@@ -3,9 +3,10 @@ Install dependenices with `npm install`
 
     heroku local web
 
-# View logs
+# Config files
+- locally, it's in `~/.env`
+- set it for production: `heroku config:set <key>=<value>`
 
-    heroku addons:open papertrail
 
 # Misc
 - see add-ons with `heroku addons`
